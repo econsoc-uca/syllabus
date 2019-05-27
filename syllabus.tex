@@ -1,0 +1,242 @@
+\documentclass[12]{article}
+%\input{/home/grant/Dropbox/LaTeX/preamble} %% Rather use self-contained preamble below
+
+%% LAYOUT AND TITLES
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[margin=1.1in]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+	\posttitle{%
+		\par\end{center}
+	\begin{center}\large#1\end{center}
+	\vskip0.5em}%
+}
+%% Change title format to be more compact
+%\usepackage{titling}
+%\setlength{\droptitle}{-2em}
+%  \title{Syllabus}
+%  \pretitle{\vspace{\droptitle}\centering\huge}
+%  \posttitle{\par}
+%  \author{Grant R. McDermott}
+%  \preauthor{\centering\large\emph}
+%  \postauthor{\par}
+%  \predate{\centering\large\emph}
+%  \postdate{\par}
+%  \date{}
+
+%% FONTS
+\usepackage[normalem]{ulem} %% For strikeout font: \sout()
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\setfontfamily{\FA}{[FontAwesome.otf]}
+% See: https://tex.stackexchange.com/a/50593
+%\setmainfont[ 
+%BoldFont       = texgyrepagella-bold.otf ,
+%ItalicFont     = texgyrepagella-italic.otf ,
+%BoldItalicFont = texgyrepagella-bolditalic.otf 
+%]{texgyrepagella-regular.otf}
+\setmainfont[
+BoldFont       = FiraSans-SemiBold.otf ,
+ItalicFont     = FiraSans-Italic.otf ,
+BoldItalicFont = FiraSans-SemiBoldItalic.otf 
+]{FiraSans-Regular.otf} %% /usr/share/texlive/texmf-dist/fonts/opentype/public/fira
+\setmonofont[Mapping=tex-text]{inconsolata}	
+
+%% MISC
+\usepackage[colorlinks = true,
+linkcolor = black,
+urlcolor  = blue,
+citecolor = blue,
+anchorcolor = black]{hyperref}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{hanging}
+\usepackage{apacite}
+\renewcommand{\refname}{Readings}
+
+
+\begin{document}
+
+\title{Economía Social y Humana}
+\subtitle{\textsc{2019 syllabus}\vspace{-2ex}}
+\author{Rony Rodriguez-Ramirez\\ Dept. Economía Aplicada, Universidad Centroamericana}
+%\date{}  % Toggle commenting to test
+\date{\vspace{-5ex}}
+
+\maketitle
+
+\section*{Sumario}
+
+\begin{tabular}{ll} 
+	\textbf{Cuándo:} 	& Lunes: 6 a 7:20 pm \\
+	\textbf{Dónde:} 	& M-01 \\
+	\textbf{Grupo:}		& B018 \\
+	\textbf{Web:} 		& \href{https://github.com/...}{https://github.com/...} \\
+	\textbf{Quién:} 	& Rony Rodriguez-Ramirez \\
+						& \, \faMortarBoard 	\, Research Assistant \\
+						& \, \faEnvelopeO 		\, \href{mailto:rony.maximiliano@doc.uca.edu.ni}{rony.maximiliano@doc.uca.edu.ni} \\
+						& \, \faHourglassHalf 	\, Lunes: 7:30 a 8:30 pm  \\
+\end{tabular} 
+
+\section*{Descripción del curso}
+
+Este seminario está dirigido a estudiantes de pregrado de economía aplicada y presentará temas actuales en economía
+social y humana. Si bien es probable que algunos materiales se superpongan con sus otros cursos de 
+la carrera, este no es solo otro curso teórico – práctico. Más bien, mi objetivo es proveerles con las temáticas actuales 
+de economía social y humana, herramientas y técnicas prácticas que beneficiarán su conocimiento y trabajos futuros como 
+economistas. Si  bien los conjuntos de datos y el enfoque de los materiales se vincularán predominantemente con la 
+economía del desarrollo, las herramientas y los métodos se aplican ampliamente.
+
+
+\newpage
+
+\section*{Cuestiones prácticas}
+
+\subsection*{Reglas de la clase y contrato didáctico}
+
+Durante las clases presenciales los/las alumnos(as) deberán cumplir con las siguientes normas:
+\begin{enumerate}
+\item Realizar sesiones de consulta con el docente, en el día y hora establecidos para ello.
+\item Cumplir con la puntualidad y asistencia a los seminarios que se impartan dentro de la clase.
+\item Participar en clase y en todas las actividades orientadas por el docente durante ese período.
+\item Atender y seguir las instrucciones del docente para la realización de cualquier trabajo o actividad dentro y fuera de clase.
+\item Entregar las tareas y asignaciones orientadas por el docente en las fechas establecidas por él mismo.
+\item Previo a cada clase, los estudiantes deberán haber leído el material instruido por el docente, el cual se detalla en el syllabus y en las agendas de trabajo. 
+\item Mantener un ambiente de inclusión y respeto dentro de la clase.
+\end{enumerate}
+Durante las clases presenciales, el docente deberá cumplir con las siguientes normas:
+\begin{enumerate}
+\item Cumplimiento del horario de clases.
+\item Entrega de notas en el tiempo correspondiente. 
+\item Mantener un ambiente de inclusión y respeto dentro de la clase.
+\item Atender las consultas establecidas por los/las alumnos(as). El único canal oficial de comunicación entre los/las alumnos(as) y el profesor será a través del correo institucional o por el Entorno Virtual de Aprendizaje. 	
+\end{enumerate}
+
+\vspace{-0.25cm}
+\subsection*{Requirimientos de software}
+Para algunas de las actividades tendremos que ocupar los siguientes softwares: \textit{\textbf{Stata}} y \textit{\textbf{R}}. Ya que uno de los propósitos de la clase es disminuir los costos, les recomiendo utilizar el lenguage de progrmación estadístico \textbf{\textit{R}} (descargar \href{https://www.r-project.org/}{aquí}). Por favor, asegurense de instalar \textbf{RStudio IDE} también (descargar \href{https://www.rstudio.com/products/rstudio/download/preview/}{aquí}).
+
+\vspace{-0.25cm}
+\section*{Evaluación y calificación}
+
+\subsection*{Determinación de notas}
+
+
+Las notas serán determinadas de la siguiente manera: 
+
+\begin{table}[!h] \centering 
+	%\caption{\textsc{grades} }
+	\label{tab:grades} 
+	\begin{tabularx}{0.5\textwidth}{Xr} 
+		\toprule
+		%		\multicolumn{2}{c}{EC 607}  \\
+		%		\midrule
+		2 $ \times$ Ensayos individuales (10\% cada uno)	& 20\% \\
+		1 $ \times$ Ensayo grupal (15 \% cada uno)			& 15\% \\
+		2 $ \times$ Talleres prácticos					& 40\% \\
+		1 $ \times$ Presentación corta					& 15\% \\
+		Participación en clase							& 10\% \\
+		\bottomrule
+	\end{tabularx} 
+\end{table} 
+
+Este desglose debería (con suerte) ser bastante autoexplicativo. Cualquier requisito específico se aclarará a medida que avanzamos en el curso. Sin embargo, aquí hay algunos detalles adicionales para \sout{pedantes} las personas a quienes les gusta todo lo que está escrito con precisión:
+
+\vspace{-0.25cm}
+\subsubsection*{Presentación corta}
+
+La mayoría de las conferencias tienen dos o más lecturas clave; consulte el esquema de la bibliografía final de este
+documento. La presentación corta se hará en grupos de 3 a 4 personas, y será una versión resumida de los artículos
+académicos o capítulos de libros (10 a 15 minutos máximo). Los temas se asignarán por orden de llegada. Sin embargo, no
+se sorprendan si les ofrezco “voluntariamente” presentar un artículo.
+
+\vspace{-0.25cm}
+\subsubsection*{Talleres}
+
+Los laboratorios tienen como objetivos demostrar las estrategias de identificación utilizadas por los autores de los artículos
+y su implementación en Stata o en R. Una semana antes de la entrega de los talleres, daré un taller demostrativo sobre un
+artículo específico que sea relacionado al artículo que tendrán que replicar. Los talleres se realizarán en grupos de 3 o 4
+personas y deberán entregar los siguientes archivos: (1) do file o R script, rmd; y (2) informe sobre el taller. Las orientaciones
+sobre el laboratorio se harán una semana antes de su entrega.
+
+\vspace{-0.25cm}
+\subsubsection*{Ensayos}
+
+Los ensayos individuales y grupales deberán de seguir las normas APA. Los ensayos grupales estarán conformados por 3
+o 4 personas. La pregunta por contestar o enunciado a reflexionar lo proporcionaré con una semana de anticipación.. 
+
+\subsection*{Honestidad e integridad académica}
+
+A los estudiantes que se les encuentre copiando o plagiando se les asignará automáticamente una calificación de cero. Los
+estudiantes tienen la responsabilidad de cumplir con los estándares de ética académica e integridad en todo su trabajo
+académico. La violación de la ética académica se remitirá al Departamento de Economía Aplicada para su adjudicación y
+puede estar sujeta a las sanciones correspondientes según lo definen las políticas de Universidad Centroamericana
+
+\subsection*{Accesibilidad}
+
+Si tiene una discapacidad documentada y anticipa acomodaciones en este curso, haga arreglos conmigo durante la primera
+semana del cuatrimestre.
+
+\section*{Bosquejo de las sesiones presenciales}
+\label{sec:outline}
+
+\subsection*{Unidades}
+
+\begin{enumerate}
+\item Introducción al concepto e importancia de la economía social y humana
+\item La economía social y humana y su relación con los cambios institucionales
+\item Interacciones sociales
+\item Evidencia empírica en educación, mercado laboral, salud, pobreza y bienestar social
+\item La economía social y humana en el contexto nicaragüense
+\end{enumerate}
+
+\newpage 
+\section*{Referencias}
+\begin{hangparas}{.25in}{1}
+Acemoglu, D., Johnson, S., \& Robinson, J. (2005). Los orígenes coloniales del desarrollo comparativo: Una investigación empírica. \textit{Revista de Economía Institucional, 7}(13), 17-67.
+
+Alianza Cooperativa Internacional de las Américas. (2007). \textit{ Diagnóstico del sector social de la economía en Nicaragua}. San José: Autor.  
+
+Bandiera,O.,  Barankay, I., \& Rasul, I. (2005). Social preferences and the response to incentives: Evidence from personnel data. \textit{Quarterly Journal of Economics, 120}(3), 917-962. 
+
+Conley, T., \& Udry, C. (2010). Learning about a new technology: Pineapple in Ghana. \textit{American Economic Review, 100}(1): 35-69. 
+
+Coraggio, J. (2011). \textit{Economía social y solidaria: El trabajo antes que el capital.} Quito: Facultad Latinoamericana de Ciencias Sociales.  
+
+Currie, J., \& Moretti, E. (2003). Mother’s Education and the intergenerational transmission of human capital: Evidence from college openings. \textit{Quarterly Journal of Economics, 118}(4), 1495-1532. 
+
+De Sousa, B. (2011). \textit{Producir para vivir: Los caminos de la producción no capitalista.} México: Fondo de Cultura Económica.  
+
+Dell, M. (2011). Los efectos persistentes de la mita minera en el Perú. \textit{Apuntes, 38}(68), 211-265. 
+
+Díaz-Muñoz, G. (2015). \textit{Economías solidarias en América Latina}. Guadalajara: Instituto Tecnológico y de Estudios Superiores de Occidente.  
+
+Garces, E., Thomas, D., \& Currie, J. (2002). Longer-term effects of head start. \textit{American Economic Review, 92}(4), 999–1012. 
+
+Kim, H., Choi, S., Kim, B., \& Pop-Eleches, C. (2018). The role of education interventions in improving economic rationality. \textit{Science,} (362), 83-86. 
+
+Malamud, O., \& Pop-Eleches, C. (2011). Home computer use and the development of human capital. \textit{Quarterly Journal of Economics, 126}(2), 987–1027. 
+
+North, D. (2006). \textit{Instituciones, cambio institucional y desempeño económico}. México: Fondo de Cultura Económica. 
+
+Nunn N., \& Wantchekon, L. (2011). The slave trade and the origins of mistrust in Africa. \textit{American Economic Review, 101}(7), 3221-3252. 
+
+Organizacíon Internacional del Trabajo. (2015). \textit{Políticas públicas para la economía social y solidaria: hacia un entorno favorable}. Turín: Autor.  
+
+Ostrom, E. (2000). \textit{El gobierno de los bienes comunes. La evolución de las instituciones de acción colectiva}. México: Fondo de Cultura Económica.
+
+Ostrom, E. (2015). \textit{Comprender la diversidad institucional}. México: Fondo de Cultura Económica. 
+
+Pop-Eleches, C., \& Urquiola, M. (2013). Going to a better school: Effects and behavioral responses.\textit{ American Economic Review, 103}(4), 1289-1324. 
+
+Sen, A. (2009). \textit{La idea de la justicia}. Buenos Aires: Taurus. 
+
+Thaler, R., \& Sunstein, C. (2008).\textit{ Un pequeño empujón. El impulso que necesitas para tomar mejores decisiones sobre salud, dinero y 
+felicidad}.  Buenos Aires: Taurus. 
+\end{hangparas}
+\end{document}
