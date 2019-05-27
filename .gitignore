@@ -29,10 +29,10 @@
 .pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
-*.bib
 *.bbl
 *.bcf
 *.blg
+*.bib
 *-blx.aux
 *-blx.bib
 *.run.xml
