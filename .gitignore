@@ -1,3 +1,7 @@
+## docx files
+*.docx
+*.doc
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -25,6 +29,7 @@
 .pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bib
 *.bbl
 *.bcf
 *.blg
